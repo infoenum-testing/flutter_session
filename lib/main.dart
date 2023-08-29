@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_demo/screens/assets_image_screen.dart';
 import 'package:flutter_application_demo/screens/button_screen.dart';
+import 'package:flutter_application_demo/screens/flexible_and_expanded.dart';
 import 'package:flutter_application_demo/screens/home_screen.dart';
 import 'package:flutter_application_demo/screens/stack_screen.dart';
 
@@ -15,8 +16,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "My first App",
-      home: ButtonScreen(),
+      title: "prakhar",
+      debugShowCheckedModeBanner: false,
+      home: FlexibleandExpanded(),
     );
   }
 }
