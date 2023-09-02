@@ -5,6 +5,7 @@ import 'package:flutter_application_demo/screens/assets_image_screen.dart';
 import 'package:flutter_application_demo/screens/bottom_navigation_bar.dart';
 import 'package:flutter_application_demo/screens/button_screen.dart';
 import 'package:flutter_application_demo/screens/flexible_and_expanded.dart';
+import 'package:flutter_application_demo/screens/form_validation.dart';
 import 'package:flutter_application_demo/screens/home_screen.dart';
 import 'package:flutter_application_demo/screens/stack_screen.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "prakhar",
       debugShowCheckedModeBanner: false,
-      home: BottomNavigationbar(),
+      home: FormValidationScreen(),
     );
   }
 }
