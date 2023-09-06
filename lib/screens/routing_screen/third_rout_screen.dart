@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_demo/screens/routing_screen/first_rout_screen.dart';
 
 class ThirdRoutScreen extends StatelessWidget {
   const ThirdRoutScreen({super.key});
@@ -7,7 +8,17 @@ class ThirdRoutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        centerTitle: true,
+        leading: Icon(Icons.abc_outlined),
+        title: Text("Home Screen"),
+        actions: [
+          Icon(Icons.abc_outlined),
+          Icon(Icons.abc_outlined),
+          Icon(Icons.abc_outlined),
+        ],
+      ),
+      drawer: Drawer(),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -25,7 +36,14 @@ class ThirdRoutScreen extends StatelessWidget {
             width: double.infinity,
             height: 50,
           ),
-          ElevatedButton(onPressed: () {}, child: Text("Navigate Screen"))
+          ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+                Navigator.pop(context);
+                Navigator.pop(context);
+                // Navigator.push(context, FirstRoutScreen.id);
+              },
+              child: Text("Navigate Screen"))
         ],
       ),
     );

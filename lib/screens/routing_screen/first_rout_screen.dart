@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_demo/route/route_name.dart';
 import 'package:flutter_application_demo/screens/routing_screen/second_rout_screen.dart';
 import 'package:flutter_application_demo/screens/routing_screen/third_rout_screen.dart';
 
@@ -33,11 +34,41 @@ class FirstRoutScreen extends StatelessWidget {
           ),
           ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, ThirdRoutScreen.id);
+                Navigator.pushNamed(
+                  context, RouteName.secondscreen,
+                  // arguments: RoutingArgument(name: "myname", age: "25")
+                );
+                // Navigator.popUntil(
+                //   context,
+                //   (route) => true,
+                // );
+
+                // Navigator.push(
+                //     context,
+                //     MaterialPageRoute(
+                //         builder: (context) => SecondRoutScreen(
+                //               technology: "flutter",
+                //             )));
               },
               child: Text("Navigate Second Screen"))
         ],
       ),
     );
   }
+}
+// Final argument =Model route.of(context).settings.arguments as Map
+
+// Static Route<dynamic> generateRoute(RouteSettings settings){
+
+// switch(settings.name){
+
+// case: 	Routename.homescreen:
+// Return MaterialPgeRoute(builder: (contyext)=>HomeScreen());
+// }
+// }
+
+class RoutingArgument {
+  String name;
+  String age;
+  RoutingArgument({required this.name, required this.age});
 }

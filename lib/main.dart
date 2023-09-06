@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_demo/route/route_name.dart';
+import 'package:flutter_application_demo/route/routes.dart';
 import 'package:flutter_application_demo/screens/Listview_and_gridview.dart';
 import 'package:flutter_application_demo/screens/assets_image_screen.dart';
 import 'package:flutter_application_demo/screens/bottom_navigation_bar.dart';
@@ -25,13 +27,14 @@ class MyApp extends StatelessWidget {
       title: "prakhar",
       debugShowCheckedModeBanner: false,
       // home: FirstRoutScreen(),
-      initialRoute: FirstRoutScreen.id,
-      routes: {
-        FirstRoutScreen.id: (context) => FirstRoutScreen(),
-        SecondRoutScreen.id: (context) =>
-            SecondRoutScreen(technology: "technology"),
-        ThirdRoutScreen.id: (context) => ThirdRoutScreen()
-      },
+      initialRoute: RouteName.firstscreen,
+      // routes: {
+      //   FirstRoutScreen.id: (context) => FirstRoutScreen(),
+      //   SecondRoutScreen.id: (context) => SecondRoutScreen(),
+      //   ThirdRoutScreen.id: (context) => ThirdRoutScreen()
+      // },
+
+      onGenerateRoute: Routes.generateRoute,
     );
   }
 }
