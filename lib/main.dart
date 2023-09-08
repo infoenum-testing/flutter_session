@@ -12,7 +12,9 @@ import 'package:flutter_application_demo/screens/home_screen.dart';
 import 'package:flutter_application_demo/screens/routing_screen/first_rout_screen.dart';
 import 'package:flutter_application_demo/screens/routing_screen/second_rout_screen.dart';
 import 'package:flutter_application_demo/screens/routing_screen/third_rout_screen.dart';
+import 'package:flutter_application_demo/screens/show_bottomsheet.dart';
 import 'package:flutter_application_demo/screens/stack_screen.dart';
+import 'package:flutter_application_demo/screens/tabbar_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,8 +28,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "prakhar",
       debugShowCheckedModeBanner: false,
-      // home: FirstRoutScreen(),
-      initialRoute: RouteName.firstscreen,
+      home: ShowModelBottomSheet(),
+      // initialRoute: RouteName.firstscreen,
       // routes: {
       //   FirstRoutScreen.id: (context) => FirstRoutScreen(),
       //   SecondRoutScreen.id: (context) => SecondRoutScreen(),

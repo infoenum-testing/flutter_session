@@ -27,7 +27,6 @@ class ThirdRoutScreen extends StatelessWidget {
           //   // width: 100,
           //   color: Colors.red,
           // ),
-
           Text(
             "Third Screen",
             style: TextStyle(fontSize: 30),
