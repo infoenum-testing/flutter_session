@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_demo/route/route_name.dart';
 import 'package:flutter_application_demo/route/routes.dart';
 import 'package:flutter_application_demo/screens/Listview_and_gridview.dart';
+import 'package:flutter_application_demo/screens/Pageview_screen.dart';
+import 'package:flutter_application_demo/screens/alert_dilog_screen.dart';
 import 'package:flutter_application_demo/screens/assets_image_screen.dart';
 import 'package:flutter_application_demo/screens/bottom_navigation_bar.dart';
 import 'package:flutter_application_demo/screens/button_screen.dart';
@@ -13,6 +15,7 @@ import 'package:flutter_application_demo/screens/routing_screen/first_rout_scree
 import 'package:flutter_application_demo/screens/routing_screen/second_rout_screen.dart';
 import 'package:flutter_application_demo/screens/routing_screen/third_rout_screen.dart';
 import 'package:flutter_application_demo/screens/show_bottomsheet.dart';
+import 'package:flutter_application_demo/screens/snackbar_screen.dart';
 import 'package:flutter_application_demo/screens/stack_screen.dart';
 import 'package:flutter_application_demo/screens/tabbar_screen.dart';
 
@@ -28,7 +31,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "prakhar",
       debugShowCheckedModeBanner: false,
-      home: ShowModelBottomSheet(),
+      home: PageViewScreen(),
       // initialRoute: RouteName.firstscreen,
       // routes: {
       //   FirstRoutScreen.id: (context) => FirstRoutScreen(),
