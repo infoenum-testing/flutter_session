@@ -48,17 +48,16 @@ class _ButtonScreenState extends State<ButtonScreen> {
             width: 90,
             height: 30,
             decoration: BoxDecoration(
-                color: Colors.transparent,
-                borderRadius: BorderRadius.circular(8)),
+                color: Colors.black, borderRadius: BorderRadius.circular(8)),
             child: Center(
                 child: Text(
               "containerbtn",
-              style: TextStyle(color: Colors.black, fontSize: 13),
+              style: TextStyle(color: Colors.white, fontSize: 13),
             )),
           ),
         )
       ]),
-      floatingActionButtonLocation: FloatingActionButtonLocation.startDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: changeColor ? Colors.amber : Colors.red,

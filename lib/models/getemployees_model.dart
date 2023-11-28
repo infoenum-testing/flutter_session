@@ -4,10 +4,13 @@
 
 import 'dart:convert';
 
-GetEmployees getEmployeesFromJson(String str) =>
-    GetEmployees.fromJson(json.decode(str));
+GetEmployees getEmployeesFromJson(String str) {
+  var data = json.decode(str);
+  return GetEmployees.fromJson(data);
+}
 
 String getEmployeesToJson(GetEmployees data) => json.encode(data.toJson());
+List<Datum> farhan = [];
 
 class GetEmployees {
   String status;

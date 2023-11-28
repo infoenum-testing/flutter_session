@@ -8,7 +8,8 @@ class StackScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(),
-        body: SizedBox(
+        body: Container(
+          color: Colors.pink,
           height: 500,
           width: 500,
           child: Stack(
@@ -23,7 +24,7 @@ class StackScreen extends StatelessWidget {
                 ),
               ),
               Positioned(
-                // top: 500,
+                top: 0,
                 child: Container(
                   width: 100,
                   height: 100,
@@ -31,6 +32,7 @@ class StackScreen extends StatelessWidget {
                 ),
               ),
               Positioned(
+                top: 0,
                 child: Container(
                   width: 100,
                   height: 100,

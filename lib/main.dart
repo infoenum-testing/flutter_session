@@ -4,6 +4,7 @@ import 'package:flutter_application_demo/route/route_name.dart';
 import 'package:flutter_application_demo/route/routes.dart';
 import 'package:flutter_application_demo/screens/Listview_and_gridview.dart';
 import 'package:flutter_application_demo/screens/Pageview_screen.dart';
+import 'package:flutter_application_demo/screens/Stream_demo.dart';
 import 'package:flutter_application_demo/screens/alert_dilog_screen.dart';
 import 'package:flutter_application_demo/screens/assets_image_screen.dart';
 import 'package:flutter_application_demo/screens/bottom_navigation_bar.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "prakhar",
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: StreamDemo(),
       // initialRoute: RouteName.firstscreen,
       // routes: {
       //   FirstRoutScreen.id: (context) => FirstRoutScreen(),
