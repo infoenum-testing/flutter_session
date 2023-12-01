@@ -7,25 +7,15 @@ import 'package:http/http.dart' as http;
 
 import 'dart:convert' as convert;
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomePage extends StatelessWidget {
+  HomePage({super.key});
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   List<Datum> getemployeeslist = [];
+
   bool dataloading = false;
 
-  @override
-  void initState() {
-    getemployees();
-
-    super.initState();
-  }
-
-  getemployees() async {
+  // getemployees() async {
+  Future<List<Datum>> getemployees() async {
     debugPrint("run api");
     dataloading = true;
     try {
@@ -39,7 +29,7 @@ class _HomePageState extends State<HomePage> {
         debugPrint("++++++++++${getemployees.status}");
 
         getemployeeslist = getemployees.data;
-        setState(() {});
+        // setState(() {});
         debugPrint("++++++++++${getemployeeslist.length}");
       }
       dataloading = false;
@@ -47,39 +37,39 @@ class _HomePageState extends State<HomePage> {
     } catch (e) {
       print(e.toString());
     }
+    return getemployeeslist;
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: dataloading
-          ? Center(child: CircularProgressIndicator())
-          : ListView.builder(
-              itemCount: getemployeeslist.length,
-              itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Card(
-                    child: ListTile(
-                      title: Text(getemployeeslist[index].employeeName),
-                      subtitle: Text(
-                          getemployeeslist[index].employeeSalary.toString()),
-                      trailing:
-                          Text(getemployeeslist[index].employeeAge.toString()),
-                    ),
-                  ),
+        appBar: AppBar(),
+        body: FutureBuilder(
+            future: getemployees(),
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                return ListView.builder(
+                    itemCount: getemployeeslist.length,
+                    itemBuilder: (context, index) {
+                      return Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Card(
+                          child: ListTile(
+                            title: Text(getemployeeslist[index].employeeName),
+                            subtitle: Text(getemployeeslist[index]
+                                .employeeSalary
+                                .toString()),
+                            trailing: Text(
+                                getemployeeslist[index].employeeAge.toString()),
+                          ),
+                        ),
+                      );
+                    });
+              } else {
+                return Center(
+                  child: CircularProgressIndicator(),
                 );
-
-                //  Column(
-                //   children: [
-                //     Text(getemployeeslist[index].id.toString()),
-                //     Text(getemployeeslist[index].employeeName),
-                //     Text(getemployeeslist[index].employeeSalary.toString()),
-                //     Text(getemployeeslist[index].employeeAge.toString()),
-                //   ],
-                // );
-              }),
-    );
+              }
+            }));
   }
 }

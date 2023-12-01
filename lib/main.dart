@@ -13,6 +13,7 @@ import 'package:flutter_application_demo/screens/flexible_and_expanded.dart';
 import 'package:flutter_application_demo/screens/form_validation.dart';
 import 'package:flutter_application_demo/screens/home_page.dart';
 import 'package:flutter_application_demo/screens/home_screen.dart';
+import 'package:flutter_application_demo/screens/onbording_screen.dart';
 import 'package:flutter_application_demo/screens/routing_screen/first_rout_screen.dart';
 import 'package:flutter_application_demo/screens/routing_screen/second_rout_screen.dart';
 import 'package:flutter_application_demo/screens/routing_screen/third_rout_screen.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "prakhar",
       debugShowCheckedModeBanner: false,
-      home: StreamDemo(),
+      home: OnbordingScreen(),
       // initialRoute: RouteName.firstscreen,
       // routes: {
       //   FirstRoutScreen.id: (context) => FirstRoutScreen(),
