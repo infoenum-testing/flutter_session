@@ -11,6 +11,7 @@ import 'package:flutter_application_demo/screens/bottom_navigation_bar.dart';
 import 'package:flutter_application_demo/screens/button_screen.dart';
 import 'package:flutter_application_demo/screens/flexible_and_expanded.dart';
 import 'package:flutter_application_demo/screens/form_validation.dart';
+import 'package:flutter_application_demo/screens/getx_demo.dart';
 import 'package:flutter_application_demo/screens/home_page.dart';
 import 'package:flutter_application_demo/screens/home_screen.dart';
 import 'package:flutter_application_demo/screens/onbording_screen.dart';
@@ -21,6 +22,8 @@ import 'package:flutter_application_demo/screens/show_bottomsheet.dart';
 import 'package:flutter_application_demo/screens/snackbar_screen.dart';
 import 'package:flutter_application_demo/screens/stack_screen.dart';
 import 'package:flutter_application_demo/screens/tabbar_screen.dart';
+import 'package:get/get.dart';
+// import 'package:get/route_manager.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,10 +34,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: "prakhar",
       debugShowCheckedModeBanner: false,
-      home: OnbordingScreen(),
+      home: GetxDemo(),
       // initialRoute: RouteName.firstscreen,
       // routes: {
       //   FirstRoutScreen.id: (context) => FirstRoutScreen(),
