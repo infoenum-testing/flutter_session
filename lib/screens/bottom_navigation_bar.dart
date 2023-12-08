@@ -19,6 +19,7 @@ class _BottomNavigationbarState extends State<BottomNavigationbar> {
     SettingNevScrren(),
     ProfileNevScreen()
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

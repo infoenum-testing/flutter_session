@@ -1,17 +1,22 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          title: Text(Get.arguments[1]),
+        ),
         body: SingleChildScrollView(
           physics: ScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
           scrollDirection: Axis.horizontal,
-          child: Row(
+          child: Column(
             children: [
               Container(
                 height: 300,
@@ -33,21 +38,27 @@ class HomeScreen extends StatelessWidget {
                 width: 50,
                 color: Colors.blue,
               ),
-              Container(
-                height: 100,
-                width: 50,
-                color: Colors.green,
-              ),
-              Container(
-                height: 100,
-                width: 50,
-                color: Colors.blue,
-              ),
-              Container(
-                height: 100,
-                width: 50,
-                color: Colors.black,
-              ),
+              // Container(
+              //   height: 100,
+              //   width: 50,
+              //   color: Colors.green,
+              // ),
+              // Container(
+              //   height: 100,
+              //   width: 50,
+              //   color: Colors.blue,
+              // ),
+              // Container(
+              //   height: 100,
+              //   width: 50,
+              //   color: Colors.black,
+              // ),
+              ElevatedButton(
+                  onPressed: () {
+                    // Navigator.pop(context);
+                    Get.back();
+                  },
+                  child: Text("go back"))
             ],
           ),
         )

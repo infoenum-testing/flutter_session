@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_demo/getxroute/getx_rout.dart';
 import 'package:flutter_application_demo/route/route_name.dart';
 import 'package:flutter_application_demo/route/routes.dart';
 import 'package:flutter_application_demo/screens/Listview_and_gridview.dart';
@@ -37,7 +38,9 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: "prakhar",
       debugShowCheckedModeBanner: false,
-      home: GetxDemo(),
+
+      getPages: Getxrout.routing(),
+
       // initialRoute: RouteName.firstscreen,
       // routes: {
       //   FirstRoutScreen.id: (context) => FirstRoutScreen(),

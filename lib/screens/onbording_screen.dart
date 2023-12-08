@@ -46,9 +46,9 @@ class _OnbordingScreenState extends State<OnbordingScreen> {
 
   forwordAction() {
     if (pageisLast) {
-      Navigator.push(context, MaterialPageRoute(builder: ((context) {
-        return HomeScreen();
-      })));
+      // Navigator.push(context, MaterialPageRoute(builder: ((context) {
+      //   return HomeScreen();
+      // })));
     } else {
       _pageController.nextPage(
           duration: Duration(milliseconds: 200), curve: Curves.ease);
